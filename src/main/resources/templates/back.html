@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">layout</title>
+</head>
+<body>
+    <div class="back" th:fragment="back-userId">
+        <a class="back" th:href="@{'/record/'+${user}}">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </div>
+
+    <div class="back" th:fragment="back-user">
+        <a class="back" th:href="@{'/record/'+${user.id}}">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </div>
+
+    <div class="back" th:fragment="back-recordId">
+        <a class="back" th:href="@{'/task/'+${record}}">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </div>
+</body>
+</html>

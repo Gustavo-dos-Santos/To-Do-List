@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">layout</title>
+</head>
+<body>
+  <header th:fragment="header-login">
+    <h2>Meu site</h2>
+    <nav>
+      <ul>
+        <li><a href="/login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header th:fragment="header-userId">
+    <h2>Meu site</h2>
+    <nav>
+      <ul>
+        <li><a th:href="@{'/user/' + ${user}}">User</a></li>
+        <li><a th:href="@{'/record/' + ${user}}">Record</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header th:fragment="header-user">
+    <h2>Meu site</h2>
+    <nav>
+      <ul>
+        <li><a th:href="@{'/user/'+${user.id}}">User</a></li>
+        <li><a th:href="@{'/record/'+${user.id}}">Record</a></li>
+      </ul>
+    </nav>
+  </header>
+</body>
+</html>

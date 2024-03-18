@@ -1,0 +1,225 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    text-transform: capitalize;
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    max-width: 70%;
+    margin: 10px auto;
+    padding: 20px;
+
+}
+
+form {
+    min-width: 300px;
+    max-width: 400px;
+    width: 50%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 3%;
+    margin:0 auto ;
+    background-color: #f9f9f9;
+}
+
+h2{
+    text-transform: capitalize;
+    text-align: center;
+}
+
+div.campo-entrada{
+    margin-bottom: 15px;
+}
+
+label{
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"]{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2%;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button[type="submit"], button[type="button"]{
+    width: 100%;
+    padding: 2% 3%;
+    border: none;
+    border-radius: 3px; 
+    background-color: #007bff;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    transition: background-color 0.1s;
+    margin: 2% 0;
+}
+button[type="submit"]:hover{
+
+    background-color: #0056b3;
+}
+
+button[type="button"]{
+    width: 20%;
+    background-color: #00cc22;
+}
+
+button[type="button"]:hover{
+    background-color: #00992e;
+}
+
+button.del{
+    width:20%;
+    color:black;
+    background-color:#dd0000;
+}
+
+button.del:hover{
+    background-color:#a80000;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+div.amain{
+    margin: 20px 0;
+}
+
+div.back{
+}
+
+div.record-list{
+    display:flex;
+    flex-wrap: wrap;
+    background-color: #f9f9f9;
+    border-radius:10px;
+    justify-content:space-between;
+}
+
+div.task-list{
+    background-color: #f9f9f9;
+    border-radius:10px;
+    padding: 10px 0;
+}
+
+div.record{
+    background-color: #0300A8;
+    margin: 5px;
+    width: 30%;
+    min-width: 200px;
+    height: 50px;
+    display:flex;
+    padding:5px;
+    border-radius: 10px;
+}
+div.task{
+    background-color: #0300A8;
+    margin: 5px;
+    width: 97%;
+    min-width: 200px;
+    height: 50px;
+    display:flex;
+    padding:5px;
+    border-radius: 10px;
+}
+
+a.amain{
+    background-color: #333;
+    margin: 10px;
+    padding: 10px;
+    width: 10%;
+    min-width:90px;
+    border-radius:10px;
+    text-align: center;
+    transition: background 0.3s
+}
+
+a.amain:hover{
+    background-color: #555;
+}
+
+a.record{
+    text-transform: capitalize;
+    padding: 13px;
+    width:80%;
+    transition: background 0.3s
+}
+
+a.task{
+    text-transform: capitalize;
+    padding: 13px;
+    width:80%;
+    transition: background 0.3s
+}
+
+a.edit{
+    width:10%;
+    padding: 13px;
+    text-align:center;
+    transition: background 0.3s
+}
+
+a.delete{
+    width:10%;
+    padding: 13px;
+    text-align:center;
+    transition: background 0.3s
+}
+
+span.time{
+    margin-right: 30px;
+}
+
+a.edit:hover , a.record:hover, a.delete:hover , a.task:hover{
+    background-color: #0033FF;
+}
+
+a.back{
+    color:black;
+    padding:5px;
+    transition: background 0.6s
+}
+
+span{
+    font-size: 1.2em;
+}

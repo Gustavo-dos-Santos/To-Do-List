@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <header th:include="~{header :: header-userId}"></header>
+    <main>
+        <div class="record-list">
+            <div class = "record" th:each="record : ${records}">
+                <a class="record" th:href="@{'/task/'+${record.id}}" >
+                    <span th:text="${record.title}"></span>
+                </a>
+                <a class="edit" th:href="@{'/record/'+${user}+'/edit/'+ ${record.id}}"><i class="fas fa-cog icon"></i></a>
+                <a class="delete" th:href="@{'/record/'+${user}+'/delete/'+ ${record.id}}"><i class="fas fa-trash-alt icon"></i></a>
+            </div>
+        </div>
+        <div class="amain">
+            <a class="amain" th:href="@{'/record/' + ${user} + '/create'}"> New Record</a>
+        </div>
+    </main>
+</body>
+</html>

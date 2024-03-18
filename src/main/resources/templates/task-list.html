@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<header th:include="~{header :: header-user}"></header>
+<main>
+    <div class="back" th:replace="~{back :: back-user}">
+        <a class="back" th:href="@{'/record/'+${user.id}}">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </div>
+    <div class="task-list">
+        <h2 th:text="${record.title}"></h2>
+        <div class = "task" th:each="task : ${tasks}">
+            <a class="task" th:href="@{'/task/'+ ${record.id}}" >
+                <span class="time" th:text="${task.time}"></span>
+                <span class="description" th:text="${task.description}"></span>
+            </a>
+            <a class="edit" th:href="@{'/task/'+${record.id}+'/edit/'+${task.id}}"><i class="fas fa-cog icon"></i></a>
+            <a class="delete" th:href="@{'/task/'+${record.id}+'/delete/'+ ${task.id}}"><i class="fas fa-trash-alt icon"></i></a>
+        </div>
+    </div>
+    <div class="amain">
+        <a class="amain" th:href="@{'/task/'+ ${record.id} + '/create' }"> New task</a>
+    </div>
+</main>
+
+</body>
+</html>
